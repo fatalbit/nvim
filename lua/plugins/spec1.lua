@@ -83,5 +83,10 @@ return {
     dependencies = {
       "echasnovski/mini.icons"
     }
+  },
+  { 
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {}
   }
 }
