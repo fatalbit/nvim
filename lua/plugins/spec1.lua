@@ -50,9 +50,9 @@ return {
       keys = "etovxqpdygfblzhckisuran"
     },
     keys = {
-      {"hl", "<cmd>HopLine<cr>", desc = "Hop Line"},
-      {"hw", "<cmd>HopWord<cr>", desc = "Hop Word"},
-      {"hp", "<cmd>HopPattern<cr>", desc = "Hop Pattern"}
+      {"<leader>hl", "<cmd>HopLine<cr>", desc = "Hop Line"},
+      {"<leader>hw", "<cmd>HopWord<cr>", desc = "Hop Word"},
+      {"<leader>hp", "<cmd>HopPattern<cr>", desc = "Hop Pattern"}
     }
   },
   {
@@ -90,11 +90,12 @@ return {
     opts = {}
   },
   {
-    "nvim-treesitter/nvim-treesitter-context",
-    dependencies = {"nvim-treesitter/nvim-treesitter"},
-    config = function()
-      require("treesitter-context").setup()
-    end
+    'Bekaboo/dropbar.nvim',
+    -- optional, but required for fuzzy finder support
+    dependencies = {
+      'nvim-telescope/telescope-fzf-native.nvim',
+      build = 'make'
+    }
   },
   {
     "petertriho/nvim-scrollbar",
