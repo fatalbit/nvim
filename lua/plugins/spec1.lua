@@ -103,5 +103,8 @@ return {
     config = function()
       require("scrollbar").setup()
     end
+  },
+  {
+    "RRethy/vim-illuminate",
   }
 }
